@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    height: 93vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 3.125rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-family: 'Mohave', sans-serif;
+    font-size: 50px;
+}
+
+.left {
+    position: relative;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.color {
+    height: 2.1875rem;
+    width: 2.1875rem;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.color:nth-child(1) {
+    background-color: #25AFE4;
+}
+
+.color:nth-child(2) {
+    background-color: #d4b241;
+}
+
+.color:nth-child(3) {
+    background-color: #D72C87;
+}
+
+.left {
+    max-height: 37.5rem;
+    max-width: 37.5rem;
+}
+
+.left .umbrella {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    animation: anim 1s linear 1 0s;
+}
+
+
+.file-input__input {
+    width: 0.0063rem;
+    height: 0.0063rem;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+#error {
+    color: red;
+}
+
+.file-input {
+    background-color: #D72C87;
+    width: 18.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-input__label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 0.625rem 0.75rem;
+    width: 100%;
+    gap: 3.75rem;
+
+}
+
+.upload-button {
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.file-input__label svg {
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+
+#loading-div {
+    height: 6.25rem;
+    width: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+}
+
+#loading-div img {
+    height: 100%;
+    width: 100%;
+    animation: rotation 2s infinite linear;
+}
+
+#preview-div {
+    height: 1vw;
+    width: fit-content;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview-div img {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    object-fit: contain;
+}
+
+h1,
+h3,
+p {
+    text-align: center;
+}
+
+
+
+.bodyBlue {
+    background: linear-gradient(110.5057981109727deg, rgba(236, 236, 236, 1) 5.533854166666667%, rgba(195, 229, 248, 1) 96.67968749999999%);
+}
+
+.bodyYellow {
+    background: linear-gradient(110.28835204335417deg, rgba(254, 255, 224, 1) 50.32172309027777%, rgba(232, 211, 137, 1) 96.74153645833331%);
+}
+
+.bodyPink {
+    background: linear-gradient(108.85675884452826deg, rgba(255, 245, 252, 1) 24.777560763888886%, rgba(252, 215, 216, 1) 96.43880208333331%)
+}
+
+body {
+    background: linear-gradient(108.85675884452826deg, rgba(255, 245, 252, 1) 24.777560763888886%, rgba(252, 215, 216, 1) 96.43880208333331%)
+}
+
+@keyframes anim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .main {
+        flex-direction: column;
+        padding: 1.25rem;
+        margin: auto;
+        height: 100vh;
+    }
+
+    .file-input {
+        width: 15.625rem;
+    }
+
+    .file-input__label {
+        gap: 4.375rem;
+
+    }
+
+    #preview-div {
+        height: 3vw;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .main {
+        flex-direction: column;
+        padding: 1.25rem;
+        margin: auto;
+    }
+
+    .file-input {
+        width: 12.5rem;
+    }
+
+    .file-input__label {
+        gap: 1.875rem;
+
+    }
+}

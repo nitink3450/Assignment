@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@700&display=swap" rel="stylesheet">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="body">
+    <div class="main">
+        <div class="left" download>
+            <img class="umbrella" src="./assets/pink.png" alt="">
+            <div id="preview-div"></div>
+            <div id="loading-div" style="display: none;">
+                <img id="loader" src="./assets/loader_icon.svg" alt="Loading..." />
+            </div>
+        </div>
+        <div class="right">
+            <h1>Custom Umbrella</h1>
+            <div class="colors">
+                <div class="color blue" id="blue" onclick="colorPick(event)"></div>
+                <div class="color yellow" id="yellow" onclick="colorPick(event)"></div>
+                <div class="color pink" id="pink" onclick="colorPick(event)"></div>
+            </div>
+            <h3>Customize your umbrella</h3>
+            <p>Upload a image for an instant review</p>
+            <p>.png and .jpg file only and max size 5mb</p>
+            <div class="file-input">
+                <input type="file" name="file-input" id="file-input" class="file-input__input"
+                    accept="image/jpeg, image/png" onchange="uploadImage(event)" />
+                <label class="file-input__label" for="file-input">
+                    <img src="./assets/upload_icon.svg" height="15px" width="15px" alt="">
+                    <div class="upload-button">UPLOAD LOGO</div>
+                </label>
+            </div>
+            <div id="error"></div>
+
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
